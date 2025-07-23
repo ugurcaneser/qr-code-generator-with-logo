@@ -18,6 +18,7 @@ if qr_btn and qr_text:
     # Generate QR code
     qr = qrcode.QRCode(
         error_correction=qrcode.constants.ERROR_CORRECT_H
+        # Do not set version, let qrcode auto-select a valid version
     )
     qr.add_data(qr_text)
     qr.make(fit=True)
